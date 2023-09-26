@@ -19,6 +19,12 @@ for (let i = 1; i <= 100; i++) {
 
 // console.log(products);
 
+app.get('/add-product', (req,res)=>{
+  res.render('add-product');
+})
+
+
+
 app.get('/products', (req,res)=> {
   const limit = parseInt(req.query.limit) || 10;
   const page = parseInt(req.query.page) || 1;
